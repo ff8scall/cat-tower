@@ -1,0 +1,63 @@
+.die {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background: white;
+  border: 3px solid #333;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s;
+  margin-bottom: 25px;
+  /* Space for label below */
+}
+
+.die:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.die.selected {
+  border-color: #d35400;
+  background-color: #fce6c9;
+  transform: translateY(-5px);
+}
+
+.die.disabled {
+  opacity: 0.7;
+  cursor: default;
+  border-color: #999;
+}
+
+.value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  color: #555;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-top: 5px;
+}
+
+.label {
+  position: absolute;
+  bottom: -25px;
+  /* Position OUTSIDE the die */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  font-weight: bold;
+  color: #333;
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+}
